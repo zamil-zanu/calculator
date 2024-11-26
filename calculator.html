@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .calculator {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .screen {
+            width: 100%;
+            height: 40px;
+            text-align: right;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            gap: 10px;
+            
+        }
+        .buttons button {
+            height: 50px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            background-color: #1cf308;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            background-color: #ddd;
+        }
+    </style>
+    <!-- js link -->
+     <script src="./script.js"></script>
+     <!-- boxicons -->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="screen" id="output" readonly>
+        <div class="buttons">
+            <button onclick="removeAll()">AC</button>
+            <button onclick="displayData('7')">7</button>
+            <button onclick="displayData('8')">8</button>
+            <button onclick="displayData('9')">9</button>
+            <button onclick="displayData('/')">÷</button>
+            <button onclick="displayData('4')">4</button>
+            <button onclick="displayData('5')">5</button>
+            <button onclick="displayData('6')">6</button>
+            <button onclick="displayData('*')">×</button>
+            <button onclick="displayData('1')">1</button>
+            <button onclick="displayData('2')">2</button>
+            <button onclick="displayData('3')">3</button>
+            <button onclick="displayData('-')">−</button>
+            <button onclick="displayData('0')">0</button>
+            <button onclick="displayData('%')">%</button>
+            <button onclick="removeLastItem()"><i class='bx bxs-tag-x'></i></button>     
+            <button onclick="displayData('+')">+</button>
+            <button onclick="displayData('.')">.</button>
+            <button style="grid-column: 3/5;" onclick="showResult()">=</button>
+            
+            
+        </div>
+    </div>
+
+</body>
+</html>
